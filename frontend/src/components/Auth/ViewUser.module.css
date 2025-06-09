@@ -1,0 +1,105 @@
+/* ViewUser.module.css */
+
+.viewUserContainer {
+    padding: 2rem;
+    max-width: 800px; /* Wider than edit form for better readability */
+    margin: 40px auto;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.detailsContainer {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.detailsContainer p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-weight: 600;
+    color: #555;
+    min-width: 120px; /* Fixed width for labels */
+    margin-right: 1rem;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.backButton, .editButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.backButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+.backButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.editButton {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #0a58ca;
+    transform: translateY(-2px);
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0d6efd;
+    margin-top: 50px;
+}
+
+.errorMessage {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.noUser {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 50px;
+} 

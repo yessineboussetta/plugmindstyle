@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faq>
+  <category name="Shipping">
+    <question>
+      <q>What are the shipping options?</q>
+      <a>We offer standard, express, and overnight shipping. Delivery times vary by location.</a>
+    </question>
+    <question>
+      <q>How long does standard shipping take?</q>
+      <a>Standard shipping usually takes between 5 to 7 business days.</a>
+    </question>
+    <question>
+      <q>Do you ship internationally?</q>
+      <a>Yes, we ship to over 50 countries worldwide. International rates apply.</a>
+    </question>
+  </category>
+
+  <category name="Returns">
+    <question>
+      <q>What is your return policy?</q>
+      <a>You can return items within 30 days of delivery for a full refund.</a>
+    </question>
+    <question>
+      <q>How do I initiate a return?</q>
+      <a>Log in to your account, go to Order History, and select the item you want to return.</a>
+    </question>
+    <question>
+      <q>Are there any items that cannot be returned?</q>
+      <a>Gift cards, downloadable software, and personalized items are non-returnable.</a>
+    </question>
+  </category>
+
+  <category name="Payments">
+    <question>
+      <q>What payment methods are accepted?</q>
+      <a>We accept Visa, MasterCard, PayPal, and Apple Pay.</a>
+    </question>
+    <question>
+      <q>Is it safe to enter my credit card information?</q>
+      <a>Yes, all transactions are secured using SSL encryption technology.</a>
+    </question>
+    <question>
+      <q>Can I use multiple payment methods?</q>
+      <a>At this time, we only support one payment method per order.</a>
+    </question>
+  </category>
+
+  <category name="Account">
+    <question>
+      <q>How do I create an account?</q>
+      <a>Click on Sign Up at the top right and fill in your details.</a>
+    </question>
+    <question>
+      <q>How can I reset my password?</q>
+      <a>Click on Forgot Password at login and follow the instructions sent to your email.</a>
+    </question>
+    <question>
+      <q>Can I update my email address?</q>
+      <a>Yes, go to Account Settings and update your contact information.</a>
+    </question>
+  </category>
+</faq>

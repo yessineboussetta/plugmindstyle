@@ -1,0 +1,436 @@
+/* Plugin Page Styles - Dark Glassmorphism Theme */
+
+.pluginContainer {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: fadeInUp 0.8s ease-out;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.pluginContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+}
+
+/* Header Section */
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.headerIcon {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f8fafc, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Status Card */
+.statusCard {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.statusCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.statusHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.statusHeaderIcon {
+  width: 20px;
+  height: 20px;
+  color: #38bdf8;
+}
+
+.statusHeader h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.statusContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.statusIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.statusText {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.statusActive {
+  color: #10b981;
+}
+
+.statusInactive {
+  color: #ef4444;
+}
+
+.statusChecking {
+  color: #f59e0b;
+}
+
+.statusDescription {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Section Styles */
+.section {
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionIcon {
+  width: 24px;
+  height: 24px;
+  color: #38bdf8;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.sectionHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionHeader p {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Code Block Styles */
+.codeContainer {
+  position: relative;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.codeBlock {
+  background: transparent;
+  padding: 1.5rem;
+  margin: 0;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  overflow-x: auto;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.copyBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.copyBtn:hover {
+  background: rgba(59, 130, 246, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.copyBtn.copied {
+  background: rgba(16, 185, 129, 0.9);
+}
+
+.copyIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.copyBtnSmall {
+  position: static;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* WordPress Plugin Steps */
+.pluginSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepContent h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+}
+
+.stepContent p {
+  color: #94a3b8;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+/* Download Button */
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.downloadIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Shortcode Styles */
+.shortcodeContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.shortcode {
+  background: transparent;
+  color: #38bdf8;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  padding: 0;
+  border: none;
+  flex: 1;
+}
+
+/* Tips Section */
+.tipsSection {
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.tipsSection h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0 0 1.5rem 0;
+}
+
+.tipsList {
+  display: grid;
+  gap: 1rem;
+}
+
+.tip {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.tip strong {
+  color: #38bdf8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pluginContainer {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stepNumber {
+    align-self: flex-start;
+  }
+
+  .shortcodeContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .copyBtn {
+    position: static;
+    align-self: flex-start;
+  }
+}

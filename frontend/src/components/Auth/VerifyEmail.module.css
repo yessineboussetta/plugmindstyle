@@ -1,0 +1,95 @@
+:root {
+  --accent: #0d6efd;
+  --accent-light: #eaf2ff;
+  --accent-hover: #0056b3;
+  --success: #28a745;
+  --danger: #dc3545;
+  --text-muted: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fc;
+  padding: 1rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.messageBox {
+  padding: 2.5rem 3.5rem;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: popIn 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  max-width: 520px;
+  width: 100%;
+}
+
+.messageText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  color: var(--text-muted);
+}
+
+.loading {
+  border-left: 5px solid var(--accent);
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+.success {
+  border-left: 5px solid var(--success);
+  background-color: #e9fbe8;
+  color: var(--success);
+}
+
+.error {
+  border-left: 5px solid var(--danger);
+  background-color: #ffe8e8;
+  color: var(--danger);
+}
+
+.loginButton {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

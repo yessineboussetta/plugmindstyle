@@ -1,0 +1,35 @@
+# Core framework
+fastapi==0.110.1
+uvicorn[standard]==0.29.0
+
+# Supabase & auth
+supabase==1.0.3
+postgrest==0.10.6
+python-dotenv==1.0.1
+passlib[bcrypt]==1.7.4
+PyJWT==2.8.0
+
+# LLM & LangChain ecosystem
+langchain==0.1.16
+langgraph==0.0.34
+langchain-community==0.0.34
+langchain-core==0.1.51
+langchain-openai==0.0.8
+
+# Qdrant
+qdrant-client==1.7.3
+
+# Embeddings
+sentence-transformers==2.7.0
+
+# PDF and web scraping
+PyPDF2==3.0.1
+beautifulsoup4==4.12.3
+requests==2.31.0
+
+# Database
+sqlalchemy==2.0.29
+pymysql==1.1.0
+
+# Optional: helpful during development
+python-multipart==0.0.9

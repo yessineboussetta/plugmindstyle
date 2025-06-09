@@ -1,0 +1,558 @@
+/* Modern CSS Variables - Same as Hero/Login */
+:root {
+  --primary-dark: #0f172a;
+  --primary-purple: #6366f1;
+  --primary-blue: #3b82f6;
+  --text-white: #ffffff;
+  --text-gray: #e2e8f0;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --error: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
+/* Signup Container - Same gradient as Hero/Login */
+.signupContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+/* Background Pattern - Same as Hero/Login */
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.1) 2px, transparent 0);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Back Button */
+.backButton {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  padding: 0.75rem 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Signup Form */
+.signupForm {
+  position: relative;
+  z-index: 5;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.signupForm:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* Logo Container */
+.logoContainer {
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: white;
+  padding: 14px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.websiteName {
+  font-size: 1.75rem;
+  color: var(--text-white);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nameAccent {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Form Title */
+.formTitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Input Groups */
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.dateSelectGroup select {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: var(--text-white);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.inputGroup input::placeholder,
+.dateSelectGroup select option {
+  color: var(--text-muted);
+}
+
+.inputGroup input:focus,
+.dateSelectGroup select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Date Select Group - IMPROVED */
+.dateSelectGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.dateSelectGroup select {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: var(--text-white);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e2e8f0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2rem;
+  cursor: pointer;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.dateSelectGroup select:hover {
+  border-color: var(--primary-blue);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dateSelectGroup select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+.dateSelectGroup select option {
+  background: var(--primary-dark);
+  color: var(--text-white);
+  padding: 10px;
+}
+
+/* Password Strength - IMPROVED */
+.passwordStrength {
+  margin-top: 0.75rem;
+}
+
+.strengthMeter {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.strengthSegment {
+  flex: 1;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.strengthSegment.strong {
+  background: linear-gradient(to right, #3b82f6, #6366f1);
+}
+
+.strengthSegment.strong:nth-child(1) {
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+}
+.strengthSegment.strong:nth-child(2) {
+  background: linear-gradient(to right, #60a5fa, #818cf8);
+}
+.strengthSegment.strong:nth-child(3) {
+  background: linear-gradient(to right, #818cf8, #a78bfa);
+}
+.strengthSegment.strong:nth-child(4) {
+  background: linear-gradient(to right, #a78bfa, #c4b5fd);
+}
+.strengthSegment.strong:nth-child(5) {
+  background: linear-gradient(to right, #c4b5fd, #e0e7ff);
+}
+
+.strengthSegment.strong::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.strengthFeedback {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+/* Password Confirmation */
+.confirmPasswordContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.confirmPasswordContainer input {
+  padding-right: 40px !important;
+}
+
+.matchIcon {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.checkIcon {
+  color: var(--success);
+  font-size: 1.1rem;
+}
+
+.timesIcon {
+  color: var(--error);
+  font-size: 1.1rem;
+}
+
+.match {
+  border-color: var(--success) !important;
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+.noMatch {
+  border-color: var(--error) !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.matchFeedback {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+}
+
+/* Submit Button */
+.btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  color: var(--text-white);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btnDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-muted) !important;
+}
+
+.btnDisabled:hover {
+  transform: none !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* Loading Spinner */
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--text-white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Links */
+.links {
+  margin-top: 1.5rem;
+}
+
+.loginLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loginLink span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.linkBtn {
+  background: none;
+  border: none;
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.linkBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  transition: width 0.3s ease;
+}
+
+.linkBtn:hover {
+  color: var(--text-white);
+}
+
+.linkBtn:hover::after {
+  width: 100%;
+}
+
+/* Custom Scrollbar */
+.signupForm::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signupForm::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.signupForm::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  border-radius: 4px;
+}
+
+.signupForm::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signupContainer {
+    padding: 1rem;
+  }
+
+  .backButton {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .signupForm {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .inputRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .formTitle {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .websiteName {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dateSelectGroup {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .inputGroup input,
+  .dateSelectGroup select {
+    padding: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .loginLink {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* Toast Container Styling */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.Toastify__toast--success {
+  background: rgba(16, 185, 129, 0.9);
+}
+
+.Toastify__toast--error {
+  background: rgba(239, 68, 68, 0.9);
+}
+
+.Toastify__toast--info {
+  background: rgba(59, 130, 246, 0.9);
+}
